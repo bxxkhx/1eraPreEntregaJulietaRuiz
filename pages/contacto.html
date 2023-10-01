@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Meraki</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Coleccion
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">NEW IN</a></li>
+                        <li><a class="dropdown-item" href="#">SALE</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">GIFT CARDS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <div>
+            <h1>Contactanos!</h1>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6389220152737!2d-58.413016124861336!3d-34.588001872959936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca83d2aa1521%3A0xc7a941fe0d021ba0!2sAlto%20Palermo%20Shopping!5e0!3m2!1ses-419!2sar!4v1693960559460!5m2!1ses-419!2sar" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input name="nombre" type="text" placeholder="Tu Nombre"><br>
+            <label for="numero">Telefono:</label>
+            <input name="numero" type="number"><br>
+            <label for="comentario">Comentarios:</label>
+            <textarea name="comentario"></textarea><br>
+            <input type="submit">
+        </form>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-redes">
+                <a href="#"><img src="../assets/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="../assets/whatsapp.png" alt="whatsapp"></a>
+                <a href="#"><img src="../assets/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="footer-contacto">
+                <div class="links-contacto">
+                    <ul>
+                        <li><a class="estiloB" href="../index.html">inicio</a></li>
+                        <li><a class="estiloB" href="../pages/contacto.html">contacto</a></li>
+                        <li><a class="estiloB" href="../pages/carrito.html">carrito</a></li>
+                    </ul>
+                </div>
+                <div class="links-colecciones">
+                    <ul>
+                        <li><a class="estiloB" href="#">NEW IN</a></li>
+                        <li><a class="estiloB" href="#">SALE</a></li>
+                        <li><a class="estiloB" href="#">GIFT CARD</a></li>
+                    </ul>
+                </div>
+                <div class="links-informativos">
+                    <ul>  
+                        <li><a class="estiloB" href="#">Terminos y condiciones</a></li>
+                        <li><a class="estiloB" href="#">Formas de envio</a></li>
+                        <li><a class="estiloB" href="#">Medios de pago</a></li>
+                    </ul>  
+                 </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
