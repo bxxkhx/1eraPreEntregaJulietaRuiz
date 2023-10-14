@@ -21,6 +21,13 @@
     grid-column-gap: 90px;
     justify-content: center;
     align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+h6{
+    color: gray !important;
+    font-style: italic;
+    font-weight: 75 !important;
 }
 .center{
     align-items: center;
@@ -32,6 +39,12 @@
 img{
     object-fit: cover;
     transition: transform 0.2s;
+}
+button{
+    background-color: $rosa-claro;
+    border-style: double;
+    border-color: $rosa-intermedio;
+    font-family: "prata";
 }
 .imagenColeccion:hover{
     transform: scale(1.0);
@@ -76,6 +89,7 @@ body{
 .tarjetasRopa{
     margin-bottom: 6rem;
     @extend .tarjetitas ;
+   
 }
 .carritoTarjeta{
     margin: 50px;
