@@ -6,20 +6,57 @@
     <title>Meraki</title>
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../bs/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <img src="../assets/logo.png" class="logo" alt=""> 
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="./contacto.html">contacto</a></li>
-                <li><a href="#">carrito</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Meraki</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Coleccion
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">NEW IN</a></li>
+                        <li><a class="dropdown-item" href="#">SALE</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">GIFT CARDS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
     <main>
-        <div>
+        <div class="inicioCarrito">
             <h1 class="letra1">Tu carrito esta vacio</h1>
             <h2 class="letra2">Pero tenemos miles de productos esperandote!</h2>
         </div>
@@ -29,24 +66,24 @@
         <section class="carritoTarjeta">
            
             <div class="tarjetaRopa">
-                <img src="../assets/cargoRosa.jpg" alt="vestido cynder" width="200px"  height="300px" class="imagenRopa">
-                <h3>Conjunto</h3>
+                <img src="../assets/cargoRosa.jpg" alt="cargo-rosa" width="200px"  height="300px" class="imagenRopa">
+                <h3>Cargo Rosa</h3>
             </div>
             <div class="tarjetaRopa">
-                <img src="../assets/cargoNegro.jpg" alt="carteras-grace" width="200px"  height="300px" class="imagenRopa">
-                <h3>Conjunto</h3>
+                <img src="../assets/cargoNegro.jpg" alt="cargo-negro" width="200px"  height="300px" class="imagenRopa">
+                <h3>Cargo negro</h3>
             </div>
             <div class="tarjetaRopa">
-                <img src="../assets/remeraCintas.jpg" alt="vestido-flowery" width="200px"  height="300px" class="imagenRopa">
-                <h3>Conjunto</h3>
+                <img src="../assets/remeraCintas.jpg" alt="top-con-cintas" width="200px"  height="300px" class="imagenRopa">
+                <h3>Top cintas</h3>
             </div>
             <div class="tarjetaRopa">
-                <img src="../assets/pollera.jpg" alt="conjunto-dots" width="200px"  height="300px" class="imagenRopa">
-                <h3>Conjunto</h3>
+                <img src="../assets/pollera.jpg" alt="pollera" width="200px"  height="300px" class="imagenRopa">
+                <h3>Pollera</h3>
             </div>
             <div class="tarjetaRopa">
-                <img src="../assets/pantalonCortes.jpg" alt="vestido-cynde"r width="200px"  height="300px" class="imagenRopa">
-                <h3>Conjunto</h3>
+                <img src="../assets/pantalonCortes.jpg" alt="jean-con-cortes" width="200px"  height="300px" class="imagenRopa">
+                <h3>Jean con cortes</h3>
             </div>
        </section>
        <div>
@@ -90,5 +127,6 @@
             </div>
         </div>
     </footer>
+    <script src="../bs/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+nav{
+    ul{
+        li {
+            a{
+                &:hover{
+                    background-color: $rosa-claro;
+                }
+            }
+        }
+    }
+}
+.logo {
+    width: 5%;
+    height: 2.5%;
+}

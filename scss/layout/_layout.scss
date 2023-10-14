@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* empieza el uso para mixins y extends*/
+@mixin letra{
+    font-family: "prata";
+    text-align: center;
+}
+.posters{
+    width: 100vw;
+    background-size: 700px;
+    text-align: center;
+    text-justify: center;
+    margin-top: 6rem;
+}
+.tarjetitas{
+    display: grid;
+    grid-template-columns: repeat(5 , 150px);
+    grid-column-gap: 90px;
+    justify-content: center;
+    align-content: center;
+}
+.center{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+/* termina el uso para proximos mixins y extends*/
+img{
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+.imagenColeccion:hover{
+    transform: scale(1.0);
+    padding: 10px;
+}
+.imagenRopa:hover{
+    transform: scale3d(0.5);
+    padding: 1px;
+}
+body{
+    background-color: $fondo-pantalla;
+}
+.letra1{
+    @include letra;
+    font-weight: 150;
+    color: $rosa-oscuro;
+}
+.letra2{
+    @include letra;
+    font-weight: 100;
+    color: $rosa-intermedio;
+    letter-spacing: 0.10em;
+}
+.letra3{
+    @include letra;
+    color: black;
+    overflow: hidden;
+    font-weight: 50;
+}
+.poster{
+    @extend .posters;
+    background-image: url(../assets/portada.jpg) ;
+    background-position: start;
+    height: 300px;
+}
+.posterFinal{
+    @extend .posters;
+    background-image: url(../assets/posterFinal.jpg);
+    height: 30rem;
+    background-position: center;
+}
+.tarjetasRopa{
+    margin-bottom: 6rem;
+    @extend .tarjetitas ;
+}
+.carritoTarjeta{
+    margin: 50px;
+    @extend .tarjetitas ;
+}
+.mapa {
+    background-color: $rosa-claro;
+    width: 100%;
+    height: 400px;
+    @extend .center;
+    margin: 20px;
+}
+.tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 90px;
+    @extend .center;
+    margin: 6rem;
+}
+
+.sliderRopa{
+    padding-top: 100px;
+}
+.tarjetasEncimadas {
+    background-image: url(../assets/fondo.jpg);
+    border-radius: 35%;
+    width: 29rem;
+    height: 19rem;
+    margin: 40px;
+    display: flex;
+    @extend .center;
+}
+.tarjetaEncimada {
+    background-color: #b3827b;
+    display: flex;
+    flex-direction: column;
+    @extend .center;
+    border-radius: 50%;
+    width:250px ;
+    height:250px ;
+    @include letra;
+    font-weight: 100;
+    font-style: italic;
+}
+p{
+    width: fit-content;
+}
+.imagenRopa , .imagenColeccion{
+    justify-content: center;
+    box-shadow: 1rem 1rem 1rem 1rem #bebbba;
+}
+.Email{
+    font-family: "prata";
+    align-self: center;
+    margin: 30px;
+}
+.gridTarjetas{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 350px ;
+    @extend .center;
+    
+}
+.formulario{
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    @extend .center;
+    font-size: medium;
+    letter-spacing: 0.10em;
+    margin-bottom: 50px;
+}
+iframe{
+    justify-self: center;
+    align-self: center;
+}
+.tarjetas{
+    h3{
+        margin-top: 15px;
+    }
+}
+/* Empieza la adaptacion a mobile */
+@media (max-width:577px){
+    .gridTarjetas{
+        display: grid;
+        grid-template-columns:300px ;
+        grid-row-gap: 200px;
+        grid-template-rows:155px ;
+        margin-bottom: 300px;
+        align-content: center;
+        justify-content: center;
+    }
+    .tarjetasEncimadas{
+        flex-direction: row;
+        width: 20rem;
+        height: 15rem;
+        background-image: url(../assets/fondo.jpg);
+        justify-items: center;
+        align-items: center;
+        margin: 1px;
+    }
+    .tarjetaEncimada{
+        width: 13rem;
+        height: 13rem;
+        align-items: center;
+        justify-items: center;
+    }
+    .tarjetas{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 90px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .tarjetasRopa{
+        display:grid;
+        grid-template-columns:repeat(3 , 5rem);
+        grid-template-rows: repeat(2 , 7,5rem);
+        grid-column-gap: 40px;
+        margin-top: 40px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        
+}
+    .imagenRopa{
+        width:100px ;
+        height: 150px;
+        justify-self: center;
+    }
+}
+@media (max-width:993px) and (min-width:769px) {
+    .gridTarjetas{
+        display: grid;
+        grid-template-columns:300px ;
+        grid-row-gap: 200px;
+        grid-template-rows:155px ;
+        margin-bottom: 300px;
+        align-content: center;
+        justify-content: center;
+    }
+    .tarjetasEncimadas{
+        flex-direction: row;
+        width: 20rem;
+        height: 15rem;
+        background-image: url(../assets/fondo.jpg);
+        justify-items: center;
+        align-items: center;
+        margin: 1px;
+    }
+    .tarjetaEncimada{
+        width: 13rem;
+        height: 13rem;
+        align-items: center;
+        justify-items: center;
+    }
+    .tarjetas{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 90px;
+        align-content: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-self: center;
+    }
+    .tarjetasRopa{
+        display:grid;
+        grid-template-columns:repeat(3 , 5rem);
+        grid-template-rows: repeat(2 , 7,5rem);
+        grid-column-gap: 40px;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        justify-items: center;
+        margin-top: 40px;
+        
+}
+    .imagenRopa{
+        width:100px ;
+        height: 150px;
+        justify-self: center;
+    }
+}
+@media (max-width:769px) and (min-width:577px) {
+    .gridTarjetas{
+        display: grid;
+        grid-template-columns:400px ;
+        grid-row-gap: 200px;
+        grid-template-rows:200px ;
+        margin-bottom: 300px;
+        align-content: center;
+        justify-content: center;
+    }
+    .tarjetasEncimadas{
+        flex-direction: row;
+        width: 25rem;
+        height: 20rem;
+        background-image: url(../assets/fondo.jpg);
+        justify-items: center;
+        align-items: center;
+        margin: 1px;
+    }
+    .tarjetaEncimada{
+        width: 17rem;
+        height: 17rem;
+        align-items: center;
+        justify-items: center;
+    }
+    .tarjetas{
+        display: grid;
+        grid-template-columns: 30rem;
+        grid-template-rows: repeat(3 , 30rem);
+        grid-row-gap: 90px;
+        align-content: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-items: center;
+        justify-self: center;
+    }
+    .tarjetasRopa{
+        display:grid;
+        grid-template-columns:repeat(3 , 8rem);
+        grid-template-rows: repeat(2 , 12rem);
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        justify-items: center;
+        margin-top: 40px;
+        
+}
+    .imagenRopa{
+        width:125px ;
+        height: 175px;
+        justify-self: center;
+    }
+}
