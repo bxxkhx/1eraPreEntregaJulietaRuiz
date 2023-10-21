@@ -1,0 +1,17 @@
+.letra1{
+    @include letra;
+    font-weight: 150;
+    color: $rosa-oscuro;
+}
+.letra2{
+    @include letra;
+    font-weight: 100;
+    color: $rosa-intermedio;
+    letter-spacing: 0.10em;
+}
+.letra3{
+    @include letra;
+    color: black;
+    overflow: hidden;
+    font-weight: 50;
+}

@@ -1,0 +1,16 @@
+img{
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+.imagenColeccion:hover{
+    transform: scale(1.0);
+    padding: 10px;
+}
+.imagenRopa:hover{
+    transform: scale3d(0.5);
+    padding: 1px;
+}
+.imagenRopa , .imagenColeccion{
+    justify-content: center;
+    box-shadow: 1rem 1rem 1rem 1rem #bebbba;
+}

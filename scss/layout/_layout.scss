@@ -36,64 +36,15 @@ h6{
     justify-items: center;
 }
 /* termina el uso para proximos mixins y extends*/
-img{
-    object-fit: cover;
-    transition: transform 0.2s;
-}
+
 button{
     background-color: $rosa-claro;
     border-style: double;
     border-color: $rosa-intermedio;
     font-family: "prata";
 }
-.imagenColeccion:hover{
-    transform: scale(1.0);
-    padding: 10px;
-}
-.imagenRopa:hover{
-    transform: scale3d(0.5);
-    padding: 1px;
-}
 body{
     background-color: $fondo-pantalla;
-}
-.letra1{
-    @include letra;
-    font-weight: 150;
-    color: $rosa-oscuro;
-}
-.letra2{
-    @include letra;
-    font-weight: 100;
-    color: $rosa-intermedio;
-    letter-spacing: 0.10em;
-}
-.letra3{
-    @include letra;
-    color: black;
-    overflow: hidden;
-    font-weight: 50;
-}
-.poster{
-    @extend .posters;
-    background-image: url(../assets/portada.jpg) ;
-    background-position: start;
-    height: 300px;
-}
-.posterFinal{
-    @extend .posters;
-    background-image: url(../assets/posterFinal.jpg);
-    height: 30rem;
-    background-position: center;
-}
-.tarjetasRopa{
-    margin-bottom: 6rem;
-    @extend .tarjetitas ;
-   
-}
-.carritoTarjeta{
-    margin: 50px;
-    @extend .tarjetitas ;
 }
 .mapa {
     background-color: $rosa-claro;
@@ -102,57 +53,19 @@ body{
     @extend .center;
     margin: 20px;
 }
-.tarjetas{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 90px;
-    @extend .center;
-    margin: 6rem;
-}
 
 .sliderRopa{
     padding-top: 100px;
 }
-.tarjetasEncimadas {
-    background-image: url(../assets/fondo.jpg);
-    border-radius: 35%;
-    width: 29rem;
-    height: 19rem;
-    margin: 40px;
-    display: flex;
-    @extend .center;
-}
-.tarjetaEncimada {
-    background-color: #b3827b;
-    display: flex;
-    flex-direction: column;
-    @extend .center;
-    border-radius: 50%;
-    width:250px ;
-    height:250px ;
-    @include letra;
-    font-weight: 100;
-    font-style: italic;
-}
+
 p{
     width: fit-content;
 }
-.imagenRopa , .imagenColeccion{
-    justify-content: center;
-    box-shadow: 1rem 1rem 1rem 1rem #bebbba;
-}
+
 .Email{
     font-family: "prata";
     align-self: center;
     margin: 30px;
-}
-.gridTarjetas{
-    display: grid;
-    grid-template-columns: 600px 600px;
-    grid-template-rows: 350px ;
-    @extend .center;
-    
 }
 .formulario{
     display: grid;
@@ -167,11 +80,7 @@ iframe{
     justify-self: center;
     align-self: center;
 }
-.tarjetas{
-    h3{
-        margin-top: 15px;
-    }
-}
+
 /* Empieza la adaptacion a mobile */
 @media (max-width:577px){
     .gridTarjetas{
@@ -208,7 +117,7 @@ iframe{
         justify-content: center;
         justify-items: center;
     }
-    .tarjetasRopa{
+    .tarjetasRopa , .carritoTarjeta{
         display:grid;
         grid-template-columns:repeat(3 , 5rem);
         grid-template-rows: repeat(2 , 7,5rem);
@@ -220,6 +129,7 @@ iframe{
         justify-items: center;
         
 }
+
     .imagenRopa{
         width:100px ;
         height: 150px;
@@ -276,6 +186,19 @@ iframe{
         margin-top: 40px;
         
 }
+.carritoTarjeta{
+    display:grid;
+    grid-template-columns:repeat(3 , 5rem);
+    grid-template-rows: repeat(2 , 7,5rem);
+    grid-column-gap: 40px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+    
+}
     .imagenRopa{
         width:100px ;
         height: 150px;
@@ -320,20 +243,22 @@ iframe{
         justify-items: center;
         justify-self: center;
     }
-    .tarjetasRopa{
+    .tarjetasRopa , .carritoTarjeta{
         display:grid;
         grid-template-columns:repeat(3 , 8rem);
         grid-template-rows: repeat(2 , 12rem);
         grid-column-gap: 40px;
-        grid-row-gap: 60px;
+        grid-row-gap: 150px;
         justify-content: center;
         align-content: center;
         justify-items: center;
         align-items: center;
         justify-items: center;
-        margin-top: 40px;
+        margin-top: 100px;
+        margin-bottom: 100px;
         
 }
+
     .imagenRopa{
         width:125px ;
         height: 175px;

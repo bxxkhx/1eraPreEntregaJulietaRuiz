@@ -1,0 +1,12 @@
+.poster{
+    @extend .posters;
+    background-image: url(../assets/portada.jpg) ;
+    background-position: start;
+    height: 300px;
+}
+.posterFinal{
+    @extend .posters;
+    background-image: url(../assets/posterFinal.jpg);
+    height: 30rem;
+    background-position: center;
+}

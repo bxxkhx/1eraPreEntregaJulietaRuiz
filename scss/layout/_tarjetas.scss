@@ -1,0 +1,50 @@
+.tarjetasRopa{
+    margin-bottom: 6rem;
+    @extend .tarjetitas ;
+   
+}
+.carritoTarjeta{
+    margin: 50px;
+    @extend .tarjetitas ;
+}
+.tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 90px;
+    @extend .center;
+    margin: 6rem;
+}
+.tarjetasEncimadas {
+    background-image: url(../assets/fondo.jpg);
+    border-radius: 35%;
+    width: 29rem;
+    height: 19rem;
+    margin: 40px;
+    display: flex;
+    @extend .center;
+}
+.tarjetaEncimada {
+    background-color: #b3827b;
+    display: flex;
+    flex-direction: column;
+    @extend .center;
+    border-radius: 50%;
+    width:250px ;
+    height:250px ;
+    @include letra;
+    font-weight: 100;
+    font-style: italic;
+}
+.gridTarjetas{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 350px ;
+    @extend .center;
+    
+}
+.tarjetas{
+    h3{
+        margin-top: 15px;
+    }
+}

@@ -34,7 +34,7 @@ h6 {
   font-weight: 75 !important;
 }
 
-.center, .formulario, .gridTarjetas, .tarjetaEncimada, .tarjetasEncimadas, .tarjetas, .mapa {
+.center, .gridTarjetas, .tarjetaEncimada, .tarjetasEncimadas, .tarjetas, .formulario, .mapa {
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -42,11 +42,6 @@ h6 {
 }
 
 /* termina el uso para proximos mixins y extends*/
-img {
-  object-fit: cover;
-  transition: transform 0.2s;
-}
-
 button {
   background-color: #f8e2db;
   border-style: double;
@@ -54,61 +49,8 @@ button {
   font-family: "prata";
 }
 
-.imagenColeccion:hover {
-  transform: scale(1);
-  padding: 10px;
-}
-
-.imagenRopa:hover {
-  transform: scale3d(0.5);
-  padding: 1px;
-}
-
 body {
   background-color: #f7f4f1;
-}
-
-.letra1 {
-  font-family: "prata";
-  text-align: center;
-  font-weight: 150;
-  color: #4c2427;
-}
-
-.letra2 {
-  font-family: "prata";
-  text-align: center;
-  font-weight: 100;
-  color: #f2b0a7;
-  letter-spacing: 0.1em;
-}
-
-.letra3 {
-  font-family: "prata";
-  text-align: center;
-  color: black;
-  overflow: hidden;
-  font-weight: 50;
-}
-
-.poster {
-  background-image: url(../assets/portada.jpg);
-  background-position: start;
-  height: 300px;
-}
-
-.posterFinal {
-  background-image: url(../assets/posterFinal.jpg);
-  height: 30rem;
-  background-position: center;
-}
-
-.tarjetasRopa {
-  margin-bottom: 6rem;
-}
-
-.carritoTarjeta {
-  margin: 50px;
 }
 
 .mapa {
@@ -118,59 +60,18 @@ body {
   margin: 20px;
 }
 
-.tarjetas {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 90px;
-  margin: 6rem;
-}
-
 .sliderRopa {
   padding-top: 100px;
-}
-
-.tarjetasEncimadas {
-  background-image: url(../assets/fondo.jpg);
-  border-radius: 35%;
-  width: 29rem;
-  height: 19rem;
-  margin: 40px;
-  display: flex;
-}
-
-.tarjetaEncimada {
-  background-color: #b3827b;
-  display: flex;
-  flex-direction: column;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  font-family: "prata";
-  text-align: center;
-  font-weight: 100;
-  font-style: italic;
 }
 
 p {
   width: fit-content;
 }
 
-.imagenRopa, .imagenColeccion {
-  justify-content: center;
-  box-shadow: 1rem 1rem 1rem 1rem #bebbba;
-}
-
 .Email {
   font-family: "prata";
   align-self: center;
   margin: 30px;
-}
-
-.gridTarjetas {
-  display: grid;
-  grid-template-columns: 600px 600px;
-  grid-template-rows: 350px;
 }
 
 .formulario {
@@ -185,10 +86,6 @@ p {
 iframe {
   justify-self: center;
   align-self: center;
-}
-
-.tarjetas h3 {
-  margin-top: 15px;
 }
 
 /* Empieza la adaptacion a mobile */
@@ -227,7 +124,7 @@ iframe {
     justify-content: center;
     justify-items: center;
   }
-  .tarjetasRopa {
+  .tarjetasRopa, .carritoTarjeta {
     display: grid;
     grid-template-columns: repeat(3, 5rem);
     grid-template-rows: repeat(2, 7, 5rem);
@@ -293,6 +190,18 @@ iframe {
     justify-items: center;
     margin-top: 40px;
   }
+  .carritoTarjeta {
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(2, 7, 5rem);
+    grid-column-gap: 40px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+  }
   .imagenRopa {
     width: 100px;
     height: 150px;
@@ -337,18 +246,19 @@ iframe {
     justify-items: center;
     justify-self: center;
   }
-  .tarjetasRopa {
+  .tarjetasRopa, .carritoTarjeta {
     display: grid;
     grid-template-columns: repeat(3, 8rem);
     grid-template-rows: repeat(2, 12rem);
     grid-column-gap: 40px;
-    grid-row-gap: 60px;
+    grid-row-gap: 150px;
     justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
     justify-items: center;
-    margin-top: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   .imagenRopa {
     width: 125px;
@@ -356,6 +266,61 @@ iframe {
     justify-self: center;
   }
 }
+.letra1 {
+  font-family: "prata";
+  text-align: center;
+  font-weight: 150;
+  color: #4c2427;
+}
+
+.letra2 {
+  font-family: "prata";
+  text-align: center;
+  font-weight: 100;
+  color: #f2b0a7;
+  letter-spacing: 0.1em;
+}
+
+.letra3 {
+  font-family: "prata";
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  font-weight: 50;
+}
+
+img {
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.imagenColeccion:hover {
+  transform: scale(1);
+  padding: 10px;
+}
+
+.imagenRopa:hover {
+  transform: scale3d(0.5);
+  padding: 1px;
+}
+
+.imagenRopa, .imagenColeccion {
+  justify-content: center;
+  box-shadow: 1rem 1rem 1rem 1rem #bebbba;
+}
+
+.poster {
+  background-image: url(../assets/portada.jpg);
+  background-position: start;
+  height: 300px;
+}
+
+.posterFinal {
+  background-image: url(../assets/posterFinal.jpg);
+  height: 30rem;
+  background-position: center;
+}
+
 nav ul li a:hover {
   background-color: #f8e2db;
 }
@@ -363,6 +328,54 @@ nav ul li a:hover {
 .logo {
   width: 5%;
   height: 2.5%;
+}
+
+.tarjetasRopa {
+  margin-bottom: 6rem;
+}
+
+.carritoTarjeta {
+  margin: 50px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 90px;
+  margin: 6rem;
+}
+
+.tarjetasEncimadas {
+  background-image: url(../assets/fondo.jpg);
+  border-radius: 35%;
+  width: 29rem;
+  height: 19rem;
+  margin: 40px;
+  display: flex;
+}
+
+.tarjetaEncimada {
+  background-color: #b3827b;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  font-family: "prata";
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.gridTarjetas {
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 350px;
+}
+
+.tarjetas h3 {
+  margin-top: 15px;
 }
 
 .links, .links-informativos ul li a, .links-colecciones ul li a, .links-contacto ul li a {
