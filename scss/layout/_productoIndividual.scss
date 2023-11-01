@@ -1,0 +1,72 @@
+.productoIndividual{
+display: flex;
+flex-direction: row;
+margin: 200px;
+align-items: center;
+justify-items: center;
+justify-content: center;
+align-content: center;
+   img{
+    object-fit: cover;
+    box-shadow: 1rem 1rem 1rem 1rem #bebbba ;
+    margin-right: 100px;
+   }
+   .letra3{
+    text-transform: lowercase;
+    letter-spacing: 0.2;
+    font-size:20px;
+    font-weight: 50;
+    font-style: italic;
+   }
+   .letra4{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: prata ;
+   }
+   button{
+    display: flex;
+    flex-direction: column;
+    margin :30px;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+        a{
+            text-decoration: none;
+            color: $rosa-intermedio;
+        }
+   }
+}
+.boton{
+
+    a{
+        text-decoration: none;
+        color: $rosa-oscuro;
+    }
+       
+}
+@media (max-width:769px) and (min-width:577px) {
+    .productoIndividual{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
+        img{
+            margin-left: 100px;
+        }
+        }
+}
+@media (max-width:577px){
+    .productoIndividual{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px;
+        margin-top: 100px;
+         img{
+            margin-left: 80px;
+         }
+        }
+}
