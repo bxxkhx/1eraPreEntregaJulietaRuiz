@@ -56,3 +56,24 @@ while (respuesta === "SI") {
 }
 
 alert("Hasta la próxima!");
+
+document.addEventListener("DOMContentLoaded", function () {
+    let formulario = document.getElementsByClassName("formulario")[0];
+    
+    formulario.addEventListener("submit", validacion);
+
+    function validacion(e) {
+        e.preventDefault();
+        console.log("Formulario enviado");
+        let nombre = formulario.querySelector('input[name="nombre"]').value;
+        let numero = formulario.querySelector('input[name="numero"]').value;
+        let comentario = formulario.querySelector('textarea[name="comentario"]').value;
+        const formData = {
+            nombre: nombre,
+            numero: numero,
+            comentario: comentario
+        };
+        const enJSON = JSON.stringify(formData);
+        localStorage.setItem("formData", enJSON);
+    }
+});
